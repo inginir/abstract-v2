@@ -1,8 +1,8 @@
 ---
 enable: true
-title: "Ready to build your next project with Next?"
+title: "Ready to work together?"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Nextplate and Next. Build lightning-fast static sites with ease and flexibility."
+description: "Book a free consultation today!"
 button:
   enable: true
   label: "Get Started Now"

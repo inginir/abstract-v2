@@ -1,3 +1,4 @@
+import { ContactForm } from "@/app/contact/page";
 import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Call_to_action } from "@/types";
@@ -39,14 +40,7 @@ const CallToAction = ({ data }: { data: PageData }) => {
                     )}
                     className="mb-6"
                   />
-                  {data.frontmatter.button.enable && (
-                    <Link
-                      className="btn btn-primary"
-                      href={data.frontmatter.button.link}
-                    >
-                      {data.frontmatter.button.label}
-                    </Link>
-                  )}
+                  <ContactForm />
                 </div>
               </div>
             </div>

@@ -21,6 +21,9 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
+  console.log('features', features)
+  console.log('hello')
+
   return (
     <>
       <SeoMeta />
@@ -40,6 +43,7 @@ const Home = () => {
                 <Link
                   className="btn btn-primary"
                   href={banner.button!.link}
+                  scroll={false}
                   target={
                     banner.button!.link.startsWith("http") ? "_blank" : "_self"
                   }
@@ -70,8 +74,8 @@ const Home = () => {
           key={index}
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
         >
-          <div className="container">
-            <div className="row items-center justify-between">
+          <div className="container" id={"what-we-do"}>
+            <div className="row items-center justify-between" >
               <div
                 className={`mb:md-0 mb-6 md:col-5 ${
                   index % 2 !== 0 && "md:order-2"

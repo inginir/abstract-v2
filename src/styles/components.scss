@@ -176,3 +176,26 @@
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px] prose-td:dark:text-darkmode-text;
 }
+
+
+.service-card{
+  &:hover{
+    @apply delay-300;
+    @apply transition-opacity;
+
+    .service-card-img{
+      @apply opacity-15;
+    }
+    .service-card-text{
+      @apply text-white;
+    }
+  }
+}
+
+.service-card-text{
+  @apply text-transparent;
+  // @apply delay-150;
+  @apply opacity-80;
+
+
+}

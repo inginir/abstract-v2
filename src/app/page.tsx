@@ -3,6 +3,7 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
+import Services from "@/partials/Services";
 import Testimonials from "@/partials/Testimonials";
 import { Button, Feature } from "@/types";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import { FaCheck } from "react-icons/fa";
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
   const testimonial = getListPage("sections/testimonial.md");
+  const service = getListPage("sections/services.md");
   const callToAction = getListPage("sections/call-to-action.md");
   const { frontmatter } = homepage;
   const {
@@ -75,7 +77,7 @@ const Home = () => {
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
         >
           <div className="container" id={"what-we-do"}>
-            <div className="row items-center justify-between" >
+            <div className="row items-center justify-between">
               <div
                 className={`mb:md-0 mb-6 md:col-5 ${
                   index % 2 !== 0 && "md:order-2"
@@ -123,6 +125,7 @@ const Home = () => {
         </section>
       ))}
 
+      <Services data={service} />
       <Testimonials data={testimonial} />
       <CallToAction data={callToAction} />
     </>

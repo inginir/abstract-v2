@@ -23,8 +23,8 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
-  console.log('features', features)
-  console.log('hello')
+  console.log("features", features);
+  console.log("hello");
 
   return (
     <>
@@ -76,7 +76,7 @@ const Home = () => {
           key={index}
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
         >
-          <div className="container" id={"what-we-do"}>
+          <div className="container" id={feature.sectionhref}>
             <div className="row items-center justify-between">
               <div
                 className={`mb:md-0 mb-6 md:col-5 ${

@@ -20,23 +20,26 @@ interface PageData {
 const ServiceCard = ({ item }: { item: Service }) => {
   return (
     <div
-      className={`text-dark dark:text-white  flex h-[400px]
-      items-center justify-center service-card m-8 w-full`}
+      className={`rounded-lg text-dark dark:text-white  flex h-[300px] w-[450px]
+      items-center justify-center service-card m-8 overflow-hidden relative`}
     >
       <ImageFallback
-        height={400}
-        width={400}
+        height={450}
+        width={450}
         className={`rounded absolute service-card-img`}
         src={item.image}
         alt={item.title}
+        fit="cover"
+        // make it fit in dimenasiona
+        style={{ objectFit: "cover" }}
       />
       <div className="flex flex-col w-4/5">
         <div
-          className={`service-card-text text-3xl font-bold mb-4`}
+          className={`service-card-text text-3xl font-bold mb-4 text-white`}
           dangerouslySetInnerHTML={markdownify(item.title)}
         />
         <div
-          className={`service-card-text`}
+          className={`service-card-text `}
           dangerouslySetInnerHTML={markdownify(item.description)}
         />
       </div>
@@ -54,7 +57,7 @@ const Services = ({ data }: { data: PageData }) => {
         />
       </div>
       {data.frontmatter.enable && (
-        <div className="col-12 flex lg:flex-row flex-col items-center">
+        <div className="col-12 flex lg:flex-row flex-col items-center flex-wrap w-full justify-center ">
           {data.frontmatter.services.map((item: Service, index: number) => (
             <ServiceCard item={item} key={index} />
           ))}

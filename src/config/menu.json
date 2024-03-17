@@ -46,12 +46,12 @@
   ],
   "footer": [
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "What we do",
+      "url": "#what-we-do"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "Who we are",
+      "url": "#who-we-are"
     }
   ]
 }

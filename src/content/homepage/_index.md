@@ -12,6 +12,7 @@ banner:
 # Features
 features:
   - title: "Want to make your brand more visible?"
+    sectionhref: "what-we-do"
     image: "/images/service-1.png"
     content: "In today's crowded digital marketplace, it's easy for brands to get lost in the noise. We specialize in enhancing brand visibility through strategic marketing initiatives, ensuring that your brand stands out and attracts the attention it deserves."
     bulletpoints:

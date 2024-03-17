@@ -45,11 +45,9 @@ const Home = () => {
                 <Link
                   className="btn btn-primary"
                   href={banner.button!.link}
-                  scroll={false}
                   target={
                     banner.button!.link.startsWith("http") ? "_blank" : "_self"
                   }
-                  rel="noopener"
                 >
                   {banner.button!.label}
                 </Link>

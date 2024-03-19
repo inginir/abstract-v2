@@ -20,26 +20,25 @@ interface PageData {
 const ServiceCard = ({ item }: { item: Service }) => {
   return (
     <div
-      className={`rounded-lg text-dark dark:text-white  flex h-[300px] w-[450px]
-      items-center justify-center service-card m-8 overflow-hidden relative`}
+      className={`rounded-lg text-dark dark:text-darkmode-text flex flex-col lg:flex-row w-full h-full lg:w-[450px] lg:h-[450px]
+      items-center justify-center service-card p-8 lg:m-8 overflow-hidden relative`}
     >
       <ImageFallback
-        height={450}
-        width={450}
-        className={`rounded absolute service-card-img`}
+        height={100}
+        width={100}
+        className={`rounded lg:absolute lg:service-card-img  w-full h-[300px] md:h-[400px]  lg:w-[450px] lg:h-[450px]`}
         src={item.image}
         alt={item.title}
         fit="cover"
-        // make it fit in dimenasiona
         style={{ objectFit: "cover" }}
       />
-      <div className="flex flex-col w-4/5">
+      <div className="flex-col w-full lg:w-4/5 lg:flex mt-5 lg:mt-0 ">
         <div
-          className={`service-card-text text-3xl font-bold mb-4 text-white`}
+          className={`lg:service-card-text text-3xl font-bold mb-4 text-white`}
           dangerouslySetInnerHTML={markdownify(item.title)}
         />
-        <div
-          className={`service-card-text `}
+        <p
+          className={`lg:service-card-text text`}
           dangerouslySetInnerHTML={markdownify(item.description)}
         />
       </div>

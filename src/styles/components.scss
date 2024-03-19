@@ -180,11 +180,11 @@
 
 .service-card{
   &:hover{
-    @apply delay-300;
-    @apply transition-opacity;
+    @apply lg:delay-300;
+    @apply lg:transition-opacity;
 
     .service-card-img{
-      @apply opacity-15;
+      @apply lg:opacity-15;
     }
     .service-card-text{
       @apply text-white;

@@ -1,4 +1,4 @@
-import { ContactForm } from "@/app/contact/page";
+import ContactForm from "@/components/ContactForm";
 import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Call_to_action } from "@/types";

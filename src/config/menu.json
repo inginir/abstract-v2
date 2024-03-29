@@ -10,17 +10,17 @@
     },
     {
       "name": "What we do",
-      "url": "#what-we-do"
+      "url": "/#what-we-do"
     }
   ],
   "footer": [
     {
       "name": "What we do",
-      "url": "#what-we-do"
+      "url": "/#what-we-do"
     },
     {
       "name": "Who we are",
-      "url": "#who-we-are"
+      "url": "/#who-we-are"
     }
   ]
 }

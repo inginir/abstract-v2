@@ -33,11 +33,23 @@ const Home = () => {
         <div className="container">
           <div className="row justify-center">
             <div className="lg:col-7 md:col-9 mb-8 text-center">
-              <h1
+              {/* <h1
                 className="mb-4 text-h3 lg:text-h1"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
-              />
-              <p
+              /> */}
+               {banner.image && (
+              <div className="col-12 mb-32 mt-16">
+                <ImageFallback
+                  src={banner.image}
+                  className="mx-auto"
+                  width="800"
+                  height="420"
+                  alt="banner image"
+                  priority
+                />
+              </div>
+            )}
+              <h4
                 className="mb-8"
                 dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
               />
@@ -53,18 +65,7 @@ const Home = () => {
                 </Link>
               )}
             </div>
-            {banner.image && (
-              <div className="col-12">
-                <ImageFallback
-                  src={banner.image}
-                  className="mx-auto"
-                  width="800"
-                  height="420"
-                  alt="banner image"
-                  priority
-                />
-              </div>
-            )}
+           
           </div>
         </div>
       </section>

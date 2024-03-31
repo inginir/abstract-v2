@@ -19,7 +19,7 @@ interface PageData {
 
 const About = ({ data }: { data: PageData }) => {
   return (
-    <div className="px-4 flex flex-col justify-center md:items-center ">
+    <div className="px-12 flex flex-col justify-center md:items-center m-5 bg-darkmode-lightbody  rounded-2xl">
       <div className="mt-12 mb-12">
         <h2
           className="mb-4"
@@ -29,7 +29,9 @@ const About = ({ data }: { data: PageData }) => {
       {data.frontmatter.enable && (
         <div className="col-12 flex lg:flex-row flex-col items-center flex-wrap w-full justify-center mb-8">
           {data.frontmatter.about.map((item, index) => (
-            <p key={index} className="mb-8 text-lg">{item.sectionText}</p>
+            <p key={index} className="mb-8 text-lg">
+              {item.sectionText}
+            </p>
           ))}
         </div>
       )}

@@ -21,7 +21,7 @@ const ServiceCard = ({ item }: { item: Service }) => {
   return (
     <div
       className={`rounded-lg text-dark dark:text-darkmode-text flex flex-col lg:flex-row w-full h-full lg:w-[450px] lg:h-[450px]
-      items-center justify-center service-card p-8 lg:m-8 overflow-hidden relative`}
+      items-center justify-center service-card mb-12 lg:m-8 overflow-hidden relative`}
     >
       <ImageFallback
         height={100}
@@ -34,7 +34,7 @@ const ServiceCard = ({ item }: { item: Service }) => {
       />
       <div className="flex-col w-full lg:w-4/5 lg:flex mt-5 lg:mt-0 ">
         <div
-          className={`lg:service-card-text text-3xl font-bold mb-4 text-white`}
+          className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-light `}
           dangerouslySetInnerHTML={markdownify(item.title)}
         />
         <p

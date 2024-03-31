@@ -81,3 +81,9 @@ export type Button = {
   label: string;
   link: string;
 };
+
+
+export type About= {
+  sectionText: string;
+  sectionTitle: string;
+};

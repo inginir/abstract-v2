@@ -1,6 +1,7 @@
 import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
+import About from "@/partials/About";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 import Services from "@/partials/Services";
@@ -13,6 +14,7 @@ const Home = () => {
   const homepage = getListPage("homepage/_index.md");
   const testimonial = getListPage("sections/testimonial.md");
   const service = getListPage("sections/services.md");
+  const about = getListPage("sections/about.md");
   const callToAction = getListPage("sections/call-to-action.md");
   const { frontmatter } = homepage;
   const {
@@ -125,7 +127,8 @@ const Home = () => {
       ))}
 
       <Services data={service} />
-      <Testimonials data={testimonial} />
+      <About data={about} />
+      {/* <Testimonials data={testimonial} /> */}
       <CallToAction data={callToAction} />
     </>
   );

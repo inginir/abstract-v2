@@ -25,8 +25,6 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
-  console.log("features", features);
-  console.log("hello");
 
   return (
     <>

@@ -18,7 +18,6 @@ interface PageData {
 }
 
 const About = ({ data }: { data: PageData }) => {
-  console.log("data", data);
   return (
     <div className="px-4 flex flex-col justify-center md:items-center ">
       <div className="mt-12 mb-12">

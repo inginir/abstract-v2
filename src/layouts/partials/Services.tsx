@@ -24,8 +24,8 @@ const ServiceCard = ({ item }: { item: Service }) => {
       items-center justify-center service-card mb-12 lg:m-8 overflow-hidden relative`}
     >
       <ImageFallback
-        height={100}
-        width={100}
+        height={800}
+        width={800}
         className={`rounded lg:absolute lg:service-card-img  w-full h-[300px] md:h-[400px]  lg:w-[450px] lg:h-[450px]`}
         src={item.image}
         alt={item.title}

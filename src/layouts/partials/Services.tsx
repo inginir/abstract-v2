@@ -34,11 +34,11 @@ const ServiceCard = ({ item }: { item: Service }) => {
       />
       <div className="flex-col w-full lg:w-4/5 lg:flex mt-5 lg:mt-0 ">
         <div
-          className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-light `}
+          className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-white `}
           dangerouslySetInnerHTML={markdownify(item.title)}
         />
         <p
-          className={`lg:service-card-text text`}
+          className={`lg:service-card-text text-white`}
           dangerouslySetInnerHTML={markdownify(item.description)}
         />
       </div>

@@ -15,7 +15,7 @@ services:
     button: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
   - title: "Social Media Management"
     description: "Ready to boost your social presence? Our Social Media Management service elevates your brand across platforms. We create engaging content, interact with your audience, and fosters a loyal online community. "
-    image: "/images/service-7.jpg"
+    image: "/images/service-7.png"
     button: "button"
   - title: "Consulting"
     description: "Discover digital success with our Consulting service. Our seasoned experts guide you through online marketing challenges, offering personalized advice and actionable strategies. Free consultation for your first session! "

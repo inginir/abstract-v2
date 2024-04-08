@@ -52,6 +52,12 @@ export type Feature = {
   content: string;
   title: string;
   sectionhref?: string;
+  sections: [
+    {
+      title: string;
+      content: string;
+    },
+  ];
 };
 
 export type Testimonial = {
@@ -82,8 +88,7 @@ export type Button = {
   link: string;
 };
 
-
-export type About= {
+export type About = {
   sectionText: string;
   sectionTitle: string;
 };

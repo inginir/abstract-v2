@@ -26,6 +26,7 @@
       "text_color": {
         "default": "#B4AFB6",
         "dark": "#DDD7D4",
+        "mdbrown": "#BDA18C",
         "light": "#DDD7D4"
       }
     }

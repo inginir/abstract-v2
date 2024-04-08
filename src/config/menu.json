@@ -5,12 +5,16 @@
       "url": "/"
     },
     {
+      "name": "What we do",
+      "url": "/#what-we-do"
+    },
+    {
       "name": "Who we are",
       "url": "#who-we-are"
     },
     {
-      "name": "What we do",
-      "url": "/#what-we-do"
+      "name": "Contact us",
+      "url": "/#contact"
     }
   ],
   "footer": [

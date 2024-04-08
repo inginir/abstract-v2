@@ -2,7 +2,7 @@
 enable: true
 title: "Ready to work together?"
 image: "/images/call-to-action.png"
-description: "Book a free consultation today!"
+description: "Book your discovery call today!"
 button:
   enable: true
   label: "Get Started Now"

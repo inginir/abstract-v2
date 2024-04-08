@@ -25,7 +25,6 @@ const Home = () => {
     features: Feature[];
   } = frontmatter;
 
-
   return (
     <>
       <SeoMeta />
@@ -37,40 +36,39 @@ const Home = () => {
                 className="mb-4 text-h3 lg:text-h1"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
               /> */}
-               {banner.image && (
-              <div className="col-12 mb-32 mt-16">
-                <ImageFallback
-                  src={banner.image}
-                  className="mx-auto"
-                  width="800"
-                  height="420"
-                  alt="banner image"
-                  priority
-                />
-              </div>
-            )}
+              {banner?.image && (
+                <div className="col-12 mb-32 mt-16">
+                  <ImageFallback
+                    src={banner.image}
+                    className="mx-auto"
+                    width="800"
+                    height="420"
+                    alt="banner image"
+                    priority
+                  />
+                </div>
+              )}
               <h4
                 className="mb-8"
-                dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
+                dangerouslySetInnerHTML={markdownify(banner?.content ?? "")}
               />
-              {banner.button!.enable && (
+              {banner?.button!.enable && (
                 <Link
                   className="btn btn-primary"
-                  href={banner.button!.link}
+                  href={banner?.button!.link}
                   target={
-                    banner.button!.link.startsWith("http") ? "_blank" : "_self"
+                    banner?.button!.link.startsWith("http") ? "_blank" : "_self"
                   }
                 >
-                  {banner.button!.label}
+                  {banner?.button!.label}
                 </Link>
               )}
             </div>
-           
           </div>
         </div>
       </section>
 
-      {features.map((feature, index: number) => (
+      {features?.map((feature, index: number) => (
         <section
           key={index}
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
@@ -94,30 +92,18 @@ const Home = () => {
                   index % 2 !== 0 && "md:order-1"
                 }`}
               >
-                <h2
-                  className="mb-4"
-                  dangerouslySetInnerHTML={markdownify(feature.title)}
-                />
-                <p
-                  className="mb-8 text-lg"
-                  dangerouslySetInnerHTML={markdownify(feature.content)}
-                />
-                <ul>
-                  {feature.bulletpoints.map((bullet: string) => (
-                    <li className="relative mb-4 pl-6" key={bullet}>
-                      <FaCheck className={"absolute left-0 top-1.5"} />
-                      <span dangerouslySetInnerHTML={markdownify(bullet)} />
-                    </li>
-                  ))}
-                </ul>
-                {feature.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-5"
-                    href={feature.button.link}
-                  >
-                    {feature.button.label}
-                  </Link>
-                )}
+                {feature.sections.map((section, index) => (
+                  <div key={index} className="mb-16">
+                    <h3
+                      className="mb-4"
+                      dangerouslySetInnerHTML={markdownify(section.title)}
+                    />
+                    <p
+                      className="mb-8 text-lg"
+                      dangerouslySetInnerHTML={markdownify(section.content)}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

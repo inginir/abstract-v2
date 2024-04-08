@@ -27,9 +27,9 @@ const About = ({ data }: { data: PageData }) => {
         />
       </div>
       {data.frontmatter.enable && (
-        <div className="col-12 flex lg:flex-row flex-col items-center flex-wrap w-full justify-center mb-8">
+        <div className="col-12 flex lg:flex-row flex-col items-center flex-wrap w-full justify-center mb-8 w-2/3">
           {data.frontmatter.about.map((item, index) => (
-            <p key={index} className="mb-8 text-lg">
+            <p key={index} className="mb-2 text-lg text-center">
               {item.sectionText}
             </p>
           ))}

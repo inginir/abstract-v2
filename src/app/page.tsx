@@ -54,7 +54,7 @@ const Home = () => {
               />
               {banner?.button!.enable && (
                 <Link
-                  className="btn btn-primary"
+                  className="btn btn-primary text-xs"
                   href={banner?.button!.link}
                   target={
                     banner?.button!.link.startsWith("http") ? "_blank" : "_self"

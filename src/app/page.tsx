@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <>
       <SeoMeta />
-      <section className="section pt-14">
+      <section className="section pt-0">
         <div className="container">
           <div className="row justify-center">
             <div className="lg:col-7 md:col-9 mb-8 text-center">
@@ -37,19 +37,19 @@ const Home = () => {
                 dangerouslySetInnerHTML={markdownify(banner.title)}
               /> */}
               {banner?.image && (
-                <div className="col-12 mb-32 mt-16">
+                <div className="col-12">
                   <ImageFallback
                     src={banner.image}
                     className="mx-auto"
-                    width="800"
-                    height="420"
+                    width="600"
+                    height="120"
                     alt="banner image"
                     priority
                   />
                 </div>
               )}
               <h4
-                className="mb-8"
+                className="mb-8 md:text-xl lg:text-2xl text-lg"
                 dangerouslySetInnerHTML={markdownify(banner?.content ?? "")}
               />
               {banner?.button!.enable && (

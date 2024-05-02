@@ -60,7 +60,7 @@ module.exports = {
           light: theme.colors.darkmode.text_color.light,
           dark: theme.colors.darkmode.text_color.dark,
           primary: theme.colors.darkmode.theme_color.primary,
-          secondary: theme.colors.darkmode.theme_color.secondary,
+          secondary: theme.colors.darkmode.text_color.mdbrown,
           body: theme.colors.darkmode.theme_color.body,
           lightbody: theme.colors.darkmode.theme_color.lightbody,
           border: theme.colors.darkmode.theme_color.border,

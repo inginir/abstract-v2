@@ -12,10 +12,10 @@ banner:
 # Features
 features:
   - image: "/images/service-1.png"
-    sections: 
-    # camn i add colors here?
-      - title: Want to make your brand more visible?
+    sections:
+      # camn i add colors here?
+      - title: ["Want to make your brand", " more visible?"]
         content: "We specialize in enhancing brand visibility through strategic marketing initiatives, ensuring that your brand stands out and attracts the attention it deserves."
-      - title: "Having trouble keeping a consistent brand?"
+      - title: ["Having trouble keeping a", " consistent ", "brand?"]
         content: "We work closely with businesses to develop cohesive brand identities and messaging strategies that resonate with their target audience."
 ---

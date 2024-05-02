@@ -93,13 +93,23 @@ const Home = () => {
                 }`}
               >
                 {feature.sections.map((section, index) => (
-                  <div key={index} className="mb-16">
-                    <h3
-                      className="mb-4"
-                      dangerouslySetInnerHTML={markdownify(section.title)}
-                    />
+                  <div key={index} className="mb-16 ">
+                    {Array.isArray(section.title) ? (
+                      section.title.map((title, index) => (
+                        <h3
+                          key={index}
+                          className={`${index % 2 !== 0 ? "dark:text-darkmode-secondary" : ""} inline mb-4`}
+                          dangerouslySetInnerHTML={markdownify(title)}
+                        />
+                      ))
+                    ) : (
+                      <h3
+                        className="mb-4"
+                        dangerouslySetInnerHTML={markdownify(section.title)}
+                      />
+                    )}
                     <p
-                      className="mb-8 text-lg"
+                      className="mb-8 mt-4 text-lg"
                       dangerouslySetInnerHTML={markdownify(section.content)}
                     />
                   </div>

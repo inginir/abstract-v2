@@ -33,10 +33,20 @@ const ServiceCard = ({ item }: { item: Service }) => {
         style={{ objectFit: "cover" }}
       />
       <div className="flex-col w-full lg:w-4/5 lg:flex mt-5 lg:mt-0 ">
-        <div
-          className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-white `}
-          dangerouslySetInnerHTML={markdownify(item.title)}
-        />
+        {Array.isArray(item.title) ? (
+          item.title.map((title, index) => (
+            <div
+              key={index}
+              className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-white ${index % 2 === 0 ? "dark:text-blue" : ""} `}
+              dangerouslySetInnerHTML={markdownify(title)}
+            />
+          ))
+        ) : (
+          <div
+            className={`lg:service-card-text text-3xl font-bold mb-4 dark:text-white `}
+            dangerouslySetInnerHTML={markdownify(item.title)}
+          />
+        )}
         <p
           className={`lg:service-card-text text-white`}
           dangerouslySetInnerHTML={markdownify(item.description)}
@@ -52,6 +62,7 @@ const Services = ({ data }: { data: PageData }) => {
       <div className="mt-12 mb-12">
         <h2
           className="mb-4"
+          id="what-we-do"
           dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
         />
       </div>

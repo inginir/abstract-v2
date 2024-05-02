@@ -6,11 +6,16 @@ export const slugify = (content: string) => {
   return slug(content);
 };
 
+
+export const getTextFromArray = (textArray: string[] | string) => {
+  return Array.isArray(textArray) ? textArray.join(" ") : textArray;
+};
+
 // markdownify
-export const markdownify = (content: string, div?: boolean) => {
+export const markdownify = (content: string | string[], div?: boolean) => {
   const markdownContent: any = div
-    ? marked.parse(content)
-    : marked.parseInline(content);
+    ? marked.parse(getTextFromArray(content))
+    : marked.parseInline(getTextFromArray(content));
   return { __html: markdownContent };
 };
 

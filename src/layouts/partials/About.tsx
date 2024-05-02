@@ -21,7 +21,10 @@ interface PageData {
 
 export default ({ data }: { data: PageData }) => {
   return (
-    <div className="px-12 flex flex-col justify-center md:items-center m-5 bg-darkmode-lightbody  rounded-2xl">
+    <div
+      id="who-we-are"
+      className="px-12 flex flex-col justify-center md:items-center m-5 bg-darkmode-lightbody  rounded-2xl"
+    >
       <div className="mt-12 mb-12">
         <h2
           className="mb-4 w-full text-center md:text-left"

@@ -1,10 +1,13 @@
 "use client";
 
 import config from "@/config/config.json";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const ContactForm = () => {
   const { contact_form_action } = config.params;
+
+  const router = useRouter();
 
   const [services, setServices] = useState({
     maketing_strategy: false,
@@ -37,6 +40,17 @@ export const ContactForm = () => {
           "Content-Type": "application/json",
         },
       });
+
+
+      form.reset();
+      //redirect  to /thank you
+      
+router.push("/thank-you")
+
+
+
+
+
     } catch (error) {
       console.log("Error", error);
     }

@@ -30,8 +30,8 @@ const Home = () => {
       <SeoMeta />
       <section className="section pt-0">
         <div className="container">
-          <div className="row justify-center">
-            <div className="lg:col-7 md:col-9 mb-8 text-center">
+          <div className="row justify-center items-center">
+            <div className="lg:col-8 md:col-9 mb-8 text-center">
               {/* <h1
                 className="mb-4 text-h3 lg:text-h1"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
@@ -48,10 +48,12 @@ const Home = () => {
                   />
                 </div>
               )}
-              <h4
-                className="mb-8 md:text-xl lg:text-2xl text-lg"
-                dangerouslySetInnerHTML={markdownify(banner?.content ?? "")}
-              />
+            </div>
+            <h4
+              className="mb-8 md:text-xl lg:text-2xl text-lg text-center"
+              dangerouslySetInnerHTML={markdownify(banner?.content ?? "")}
+            />
+            <div className="flex row justify-center items-center w-36 text-center">
               {banner?.button!.enable && (
                 <Link
                   className="btn btn-primary text-xs"

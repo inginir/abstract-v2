@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const Breadcrumbs = ({ className }: { className?: string }) => {
   const pathname = usePathname();
 
-  const paths = pathname.split("/").filter((x) => x);
+  const paths = pathname?.split("/").filter((x) => x);
   let parts = [
     {
       label: "Home",
@@ -16,7 +16,7 @@ const Breadcrumbs = ({ className }: { className?: string }) => {
     },
   ];
 
-  paths.forEach((label: string, i: number) => {
+  paths?.forEach((label: string, i: number) => {
     const href = `/${paths.slice(0, i + 1).join("/")}`;
     label !== "page" &&
       parts.push({

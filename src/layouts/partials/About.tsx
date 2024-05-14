@@ -32,9 +32,9 @@ export default ({ data }: { data: PageData }) => {
         />
       </div>
       {data.frontmatter.enable && (
-        <div className="col-12 flex lg:flex-row flex-col items-center flex-wrap justify-center mb-8 lg:w-2/3  md:text-left  md:items-start">
+        <div className="col-12 flex lg:flex-col flex-col items-center justify-center  mb-8 lg:w-full">
           {data.frontmatter.about.map((item, index) => (
-            <p key={index} className="mb-2 text-lg text-center ">
+            <p key={index} className="mb-2 text-lg text-center w-full ">
               {item.sectionText}
             </p>
           ))}

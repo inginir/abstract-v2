@@ -29,35 +29,25 @@ export default async function contactHandler(
     return res.status(400).json({ error: "Invalid email format." });
   }
 
-  try {
-    const data = {
-      from: DEFAULT_SENDER_EMAIL,
-      to: "≈@gmail.com",
-      subject: "Contact us form submission",
-      html: `<div>name: ${parsed?.name}</div>
+  const data = {
+    from: DEFAULT_SENDER_EMAIL,
+    to: "farzahran@gmail.com",
+    subject: "Contact us form submission",
+    html: `<div>name: ${parsed?.name}</div>
                          <div>email: ${parsed?.email}</div>
                          <div>services selected: ${parsed?.services}</div>
                          <div>anything else: ${parsed?.message}</div>`,
-    };
+  };
 
-    sendgrid.setApiKey(process.env.SENDGRID_API_KEY || "");
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY || "");
 
-    try {
-      const sentInfo = await sendgrid.send(data);
-      console.log(
-        "Email sent successfully",
-        sentInfo,
-      );
-    } catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: "Internal server error" });
-    }
-
-    return res.status(200).json({ message: "Email sent successfully" });
-  } catch (error: any) {
+  try {
+    const sentInfo = await sendgrid.send(data);
+    console.log("Email sent successfully", sentInfo);
+  } catch (error) {
     console.error(error);
-    return new Response("Internal server error", {
-      status: 500,
-    });
+    return res.status(500).json({ error: "Internal server error" });
   }
+
+  return res.status(200).json({ message: "Email sent successfully" });
 }

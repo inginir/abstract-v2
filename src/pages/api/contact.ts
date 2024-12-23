@@ -31,7 +31,7 @@ export default async function contactHandler(
 
   const data = {
     from: DEFAULT_SENDER_EMAIL,
-    to: "farzahran@gmail.com",
+    to: "Startabstract@gmail.com",
     subject: "Contact us form submission",
     html: `<div>name: ${parsed?.name}</div>
                          <div>email: ${parsed?.email}</div>
